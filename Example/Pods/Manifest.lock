@@ -1,0 +1,23 @@
+PODS:
+  - HPTool (0.1.0)
+  - Kiwi (3.0.0)
+
+DEPENDENCIES:
+  - HPTool (from `../`)
+  - Kiwi
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kiwi
+
+EXTERNAL SOURCES:
+  HPTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HPTool: 024e69178d8815f4ced015e36041e91ab066ed34
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+
+PODFILE CHECKSUM: 433aa504e5deeb66b0d33346de6c63b754192c78
+
+COCOAPODS: 1.6.0
