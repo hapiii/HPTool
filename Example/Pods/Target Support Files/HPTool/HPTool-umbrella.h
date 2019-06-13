@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "HPTool.h"
 #import "UIButton+HPTool.h"
 #import "UILabel+HPTool.h"
 
