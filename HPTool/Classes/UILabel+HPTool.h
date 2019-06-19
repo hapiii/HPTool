@@ -11,12 +11,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (HPTool)
 
+@property (nonatomic, assign) BOOL hp_isPlaceHolder;
+@property (nonatomic, strong) UIImageView *__nullable iv;
+
 + (UILabel *(^)(void))hp_create;
 - (UILabel *(^)(CGRect ))hp_frame;
 - (UILabel *(^)(CGFloat ))hp_font;
 - (UILabel *(^)(UIColor *))hp_textColor;
 - (UILabel *(^)(NSTextAlignment))hp_textAlignment;
 - (UILabel *(^)(NSString *))hp_text;
+- (UILabel *(^)(NSInteger ))hp_numberOfLines;
 
 @end
 
