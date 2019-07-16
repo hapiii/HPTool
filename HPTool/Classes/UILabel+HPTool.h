@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (HPTool)
 
-@property (nonatomic, assign) BOOL hp_isPlaceHolder;
-@property (nonatomic, strong) UIImageView *__nullable iv;
+//@property (nonatomic, assign) BOOL hp_isPlaceHolder;
+//@property (nonatomic, strong) UIImageView *__nullable iv;
 
 + (UILabel *(^)(void))hp_create;
 - (UILabel *(^)(CGRect ))hp_frame;

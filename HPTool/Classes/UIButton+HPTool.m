@@ -68,60 +68,70 @@
     };
 }
 
-- (UIButton *(^)(ButtonImageEdgeInsetsStyle edgeInsetsStyle))hp_edgeInsetsStyle:(CGFloat)space{
+- (UIButton *(^)(CGFloat ))addShadow{
     
-    return ^ (ButtonImageEdgeInsetsStyle edgeInsetsStyle){
-        //获取imageView和titleLabel的宽、高
-        CGFloat imageWith = self.imageView.frame.size.width;
-        CGFloat imageHeight = self.imageView.frame.size.height;
-        
-        CGFloat labelWidth = 0.0;
-        CGFloat labelHeight = 0.0;
-        if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) { //iOS8中titleLabel的size为0，用下面的这种设置
-            labelWidth = self.titleLabel.intrinsicContentSize.width;
-            labelHeight = self.titleLabel.intrinsicContentSize.height;
-        } else {
-            labelWidth = self.titleLabel.frame.size.width;
-            labelHeight = self.titleLabel.frame.size.height;
-        }
-        
-        UIEdgeInsets imageEdgeInsets = UIEdgeInsetsZero;
-        UIEdgeInsets labelEdgeInsets = UIEdgeInsetsZero;
-        
-        switch (edgeInsetsStyle) {
-            case ButtonImageEdgeInsetsStyleTop:
-            {
-                imageEdgeInsets = UIEdgeInsetsMake(-labelHeight - space * 0.5, 0, 0, -labelWidth);
-                labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith, -imageHeight - space * 0.5, 0);
-            }
-                break;
-            case ButtonImageEdgeInsetsStyleLeft:
-            {
-                imageEdgeInsets = UIEdgeInsetsMake(0, -space * 0.5, 0, space * 0.5);
-                labelEdgeInsets = UIEdgeInsetsMake(0, space * 0.5, 0, -space * 0.5);
-            }
-                break;
-            case ButtonImageEdgeInsetsStyleBottom:
-            {
-                imageEdgeInsets = UIEdgeInsetsMake(0, 0, -labelHeight - space * 0.5, -labelWidth);
-                labelEdgeInsets = UIEdgeInsetsMake(-imageHeight - space* 0.5, -imageWith, 0, 0);
-            }
-                break;
-            case ButtonImageEdgeInsetsStyleRight:
-            {
-                imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth + space * 0.5, 0, -labelWidth - space * 0.5);
-                labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith - space * 0.5, 0, imageWith+space * 0.5);
-            }
-                break;
-            default:
-                break;
-        }
-        
-        self.titleEdgeInsets = labelEdgeInsets;
-        self.imageEdgeInsets = imageEdgeInsets;
+    return ^(CGFloat cornerRadius){
+        self.layer.cornerRadius = 10;//圆角
+        self.layer.shadowColor = [UIColor blackColor].CGColor;//颜色
+        self.layer.shadowOffset = CGSizeMake(3,3);//偏移量
+        self.layer.shadowOpacity = 0.1;//透明度
+        self.layer.shadowRadius = cornerRadius;//半径
         return self;
     };
 }
+
+- (void )hp_edgeInsetsStyle:(CGFloat)space style:(ButtonImageEdgeInsetsStyle )edgeInsetsStyle{
+    
+    CGFloat imageWith = self.imageView.frame.size.width;
+    CGFloat imageHeight = self.imageView.frame.size.height;
+    
+    CGFloat labelWidth = 0.0;
+    CGFloat labelHeight = 0.0;
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) { //iOS8中titleLabel的size为0，用下面的这种设置
+        labelWidth = self.titleLabel.intrinsicContentSize.width;
+        labelHeight = self.titleLabel.intrinsicContentSize.height;
+    } else {
+        labelWidth = self.titleLabel.frame.size.width;
+        labelHeight = self.titleLabel.frame.size.height;
+    }
+    
+    UIEdgeInsets imageEdgeInsets = UIEdgeInsetsZero;
+    UIEdgeInsets labelEdgeInsets = UIEdgeInsetsZero;
+    
+    switch (edgeInsetsStyle) {
+            case ButtonImageEdgeInsetsStyleTop:
+        {
+            imageEdgeInsets = UIEdgeInsetsMake(-labelHeight - space * 0.5, 0, 0, -labelWidth);
+            labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith, -imageHeight - space * 0.5, 0);
+        }
+            break;
+            case ButtonImageEdgeInsetsStyleLeft:
+        {
+            imageEdgeInsets = UIEdgeInsetsMake(0, -space * 0.5, 0, space * 0.5);
+            labelEdgeInsets = UIEdgeInsetsMake(0, space * 0.5, 0, -space * 0.5);
+        }
+            break;
+            case ButtonImageEdgeInsetsStyleBottom:
+        {
+            imageEdgeInsets = UIEdgeInsetsMake(0, 0, -labelHeight - space * 0.5, -labelWidth);
+            labelEdgeInsets = UIEdgeInsetsMake(-imageHeight - space* 0.5, -imageWith, 0, 0);
+        }
+            break;
+            case ButtonImageEdgeInsetsStyleRight:
+        {
+            imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth + space * 0.5, 0, -labelWidth - space * 0.5);
+            labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith - space * 0.5, 0, imageWith+space * 0.5);
+        }
+            break;
+        default:
+            break;
+    }
+    
+    self.titleEdgeInsets = labelEdgeInsets;
+    self.imageEdgeInsets = imageEdgeInsets;
+    
+}
+
 
 
 
