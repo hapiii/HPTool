@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06CD7B290B7C1B5D402EF586 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		06CD7B290B7C1B5D402EF586 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0703A49712D3B6CE60EA23B6 /* Pods_HPTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FC6F0CE309F574D406F8CE /* Pods-HPTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPTool_Tests.release.xcconfig"; path = "Target Support Files/Pods-HPTool_Tests/Pods-HPTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3F16C4C404B1DF882DC0B520 /* Pods-HPTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPTool_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HPTool_Tests/Pods-HPTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,9 +63,9 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8967E595967E0066893CD7E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8967E595967E0066893CD7E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9DFD405A0E711FF9BB67CE73 /* Pods-HPTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPTool_Example.debug.xcconfig"; path = "Target Support Files/Pods-HPTool_Example/Pods-HPTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A9D3AFE418D775C5D8F3BFAA /* HPTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HPTool.podspec; path = ../HPTool.podspec; sourceTree = "<group>"; };
+		A9D3AFE418D775C5D8F3BFAA /* HPTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HPTool.podspec; path = ../HPTool.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD587616E6BE258259C5822E /* Pods_HPTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPTool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,7 +193,6 @@
 				3F16C4C404B1DF882DC0B520 /* Pods-HPTool_Tests.debug.xcconfig */,
 				16FC6F0CE309F574D406F8CE /* Pods-HPTool_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
