@@ -76,7 +76,7 @@
 - (UILabel *(^)(CGRect ))hp_frame{
     return  ^(CGRect frame){
         self.frame = frame;
-        self.hp_isPlaceHolder = YES;
+        //self.hp_isPlaceHolder = YES;
         return self;
     };
 }
